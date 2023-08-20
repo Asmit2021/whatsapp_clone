@@ -54,6 +54,7 @@ class ChatRepository {
         .collection('chats')
         .doc(recieverUserId)
         .collection('messages')
+        .orderBy('timeSent')
         .snapshots()
         .map((event) {
       List<Message> messages = [];
@@ -151,10 +152,10 @@ class ChatRepository {
       var timeSent = DateTime.now();
       UserModel reciverUserData;
 
-      var UserDataMap =
+      var userDataMap =
           await firestore.collection('users').doc(recieverUserId).get();
 
-      reciverUserData = UserModel.fromMap(UserDataMap.data()!);
+      reciverUserData = UserModel.fromMap(userDataMap.data()!);
       var messageId = const Uuid().v1();
 
       _saveDataToConatctsSubcollection(
