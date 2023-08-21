@@ -7,10 +7,8 @@ import 'package:whatsapp_clone/common/widgets/loader.dart';
 import 'package:whatsapp_clone/features/auth/controller/auth_controller.dart';
 import 'package:whatsapp_clone/features/landing/screens/landing_screen.dart';
 import 'package:whatsapp_clone/firebase_options.dart';
-import 'package:whatsapp_clone/responsive/responsive_layout.dart';
 import 'package:whatsapp_clone/router.dart';
 import 'package:whatsapp_clone/screen/mobile_screen_layout.dart';
-import 'package:whatsapp_clone/screen/web_screen_layout.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
