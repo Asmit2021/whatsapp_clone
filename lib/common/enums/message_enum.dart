@@ -3,7 +3,8 @@ enum MessageEnum {
   image('image'),
   audio('audio'),
   video('video'),
-  gif('gif');
+  gif('gif'),
+  none('');
 
   final String type;
   const MessageEnum(this.type);
